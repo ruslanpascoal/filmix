@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #3a3355;
+  // background-image: linear-gradient(to left top, #494949, #434249, #3e3b48, #383547, #332e46);
+  // background-image: linear-gradient(to right top, #2e1e40, #311d46, #331c4c, #361b53, #381a59);  /* fallback for old browsers */
+
+  align-items: center;
+  justify-content: center;
+
+  .logo-icon{
+    mat-icon{
+      position: absolute;
+      margin-top: -.4rem;
+      margin-left: 9rem;
+      font-size: 4rem;
+      color: #ffe925;
+    }
+  }
+
+  .logo {
+    span {
+      color: #ffe925;
+      font-family: "Noto Serif", serif;
+      font-weight: bold;
+      font-size: 6rem;
+    }
+  }
+  .sub {
+    span {
+      color: #fff;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 1.5rem;
+    }
+  }
+
+  .search-select {
+    margin: 1.5rem;
+    width: 30%;
+
+    #home-menu-button {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    #home-menu-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 1rem;
+      height: 270px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-radius: 0.3rem;
+
+      genres-list {
+        width: 55%;
+      }
+
+      .home-menu-card-item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+
+        
+
+        #home-menu-btn {
+          margin-top: 2rem;
+          background: rgba(255, 255, 255, 0.85);
+          height: 40px;
+          width: 40%;
+          color: #111;
+          text-decoration: none;
+          text-align: center;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.1s ease 0s;
+        }
+        #home-menu-btn:hover {
+          background-color: rgba(255, 255, 255, 1);
+        }
+        mat-slider {
+          width: 63%;
+          margin-right: -1.7rem;
+        }
+      }
+    }
+
+    mat-icon {
+      color: #fff;
+    }
+  }
+
+  #home-back-button {
+    margin-top: 2rem;
+    color: #bdbdbd;
+    padding: 1rem;
+    cursor: pointer;
+  }
+}

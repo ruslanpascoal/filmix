@@ -1,0 +1,12 @@
+<a class="card-select" (click)="algumacoisa()"
+    [style.background-color]="showGenresSection ?  'rgba(100, 95, 121, 1)' : 'rgba(255, 255, 255, 0.12)'">{{selectedGenre.genreName}}
+    <mat-icon>keyboard_arrow_down</mat-icon></a>
+
+<div class="genres-section" *ngIf="showGenresSection">
+
+    <ul>
+        <li (click)="onGenreSelect($event, item.genreName, item.id)" *ngFor="let item of genres">{{item.genreName}}</li>
+
+    </ul>
+
+</div>

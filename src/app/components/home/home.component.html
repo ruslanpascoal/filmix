@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div class="logo"><span>Filmista</span></div>
+    <div class="sub"><span>Descubra o próximo filme que você irá assistir.</span></div>
+
+    <div class="search-select">
+
+        <!-- <mat-form-field appearance="outline" *ngIf="!optSelected">
+            <mat-label>Buscar por</mat-label>
+            <mat-select (selectionChange)="doSomething($event.value)">
+                <mat-option value="optionGenero">Filmes por Gênero</mat-option>
+                <mat-option value="optionImdb">Filmes por Avaliação Mínima no IMDB</mat-option>
+                <mat-option value="optionGeneroImdb">Filmes por Avaliação Mínima no IMDB e por Gênero</mat-option>
+            </mat-select>
+        </mat-form-field> -->
+
+        <!-- <button id="home-menu-button" mat-button (click)="home_button_clicked = !home_button_clicked">
+            <span>Buscar por</span><mat-icon>keyboard_arrow_down</mat-icon>
+        </button> -->
+
+        <div id="home-menu-card">
+
+            <div class="home-menu-card-item">
+
+                <span>GÊNERO</span>
+                <genres-list></genres-list>
+
+
+            </div>
+
+
+            <div class="home-menu-card-item">
+
+                <span>RATING</span>
+                <!-- <a class="card-select">Any Score <mat-icon>keyboard_arrow_down</mat-icon></a> -->
+                <mat-slider thumbLabel tickInterval="2.5" min="0" max="9.5" step="0.5" [(ngModel)]="sliderValue">
+                </mat-slider>
+            </div>
+
+            <div class="home-menu-card-item">
+
+                <button mat-button (click)="callDiscover()" id="home-menu-btn">SEARCH</button>
+
+            </div>
+        </div>
+    </div>
+</div>

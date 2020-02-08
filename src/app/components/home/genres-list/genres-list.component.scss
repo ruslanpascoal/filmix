@@ -1,0 +1,54 @@
+.card-select {
+  font-size: 14px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  // background-color: rgba(155, 155, 155, 0.4);
+  padding: 8px 10px 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.1s ease 0s;
+  color: #fff;
+  width: 100%;
+}
+.card-select:hover {
+  background-color: rgba(100, 95, 121, 1) !important;
+}
+
+.genres-section {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 5px;
+  z-index: 3;
+  height: 200px;
+  width: 500px;
+  color: #fff;
+  border-radius: 0.3rem;
+  background-color: rgba(100, 95, 121, 1);
+  display: flex;
+  flex-flow: column wrap;
+
+  ul {
+    height: 200px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    padding-inline-start: 0px !important;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+  }
+  li {
+    width: 33.3%;
+    height: 20%;
+    transition: background-color 0.1s ease 0s;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  li:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+  }
+}
