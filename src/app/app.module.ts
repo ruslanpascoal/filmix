@@ -45,6 +45,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth-service';
 import { GenresListComponent } from './components/home/genres-list/genres-list.component';
+import { MylistComponent } from './components/mylist/mylist.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { GenresListComponent } from './components/home/genres-list/genres-list.c
     MainComponent,
     SearchBarComponent,
     HomeComponent,
-    GenresListComponent
+    GenresListComponent,
+    MylistComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ const path = require('path')
 
 const app = express();
 
+
 app.use(express.static(__dirname + '/dist/filme-recomendator'));
 
 let port = process.env.PORT;

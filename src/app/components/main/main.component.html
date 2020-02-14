@@ -1,70 +1,32 @@
-<div class="container">
+<div class="container" [ngStyle]="{'background-image': bgGradientDarkActivated ? bgGradientDark : bgGradientLight}">
 
-    <div class="search">
+    <mat-spinner *ngIf="!isLoaded"></mat-spinner>
+
+    <div class="menu">
+        <a routerLink="/mylist">MY LIST</a>
     </div>
-    <div class="content">
 
-        <mat-spinner *ngIf="!isLoaded"></mat-spinner>
-        
-        <div class="card" *ngIf="isLoaded">
+    <div class="poster">
+        <img [src]="filme.poster" height="100%" width="100%" alt="">
+    </div>
 
-            <div class="poster">
-                <img width="396" height="555" [src]="filme.poster">
-            </div>
-
-
-            <div class="info">
-                <div class="title"><span  [style.font-size]="(filme.title.length > 23) ? '2rem' : '3rem'">{{filme.title}} </span></div>
-                <div class="ratings">
-                    <a class="imdb-rating" href="{{'http://www.imdb.com/title/' + filme.imdb_id}}">
-                        <img src="../../../assets/img/imdb-logo.png" alt="" width="48" height="23">
-                        <span>{{filme.imdbRating}}</span>
-                    </a>
-                </div>
-
-                <div class="info-item genre">
-                    <span><strong>Genres: </strong></span>
-                    <span *ngFor="let item of filme.genre">{{item.name}}  </span>
-                </div>
-
-
-                <div class="info-item plot">
-                    <span><strong>Synopsis: </strong></span>
-                    <span [innerHTML]="filme.plot" [style.font-size]="(filme.plot.length > 240) ? '.8rem' : '1rem'"></span>
-                </div>
-
-                <div class="info-item director">
-                    <span><strong>Director: </strong></span>
-                    <span [innerHtml]="filme.director"></span>
-                </div>
-
-                <div class="info-item actors">
-                    <span><strong>Actors: </strong></span>
-                    <span [innerHTML]="filme.actors"></span>
-                </div>
-
-                <div class="info-item actors">
-                    <span><strong>Awards: </strong></span>
-                    <span [innerHTML]="filme.awards"></span>
-                </div>
-
-                <div class="buttons">
-                    <a mat-flat-button color="primary" matTooltip="Em desenvolvimento.">
-                        <mat-icon style="margin-right: .5rem;">add_circle</mat-icon> <span> Add to Watchlist</span>
-                    </a>
-                    <a mat-flat-button color="primary"
-                        href="{{'https://www.netflix.com/search?q=' + filme.netflixSearch.replace(' ', '%20')}}" target="_blank"><img
-                            src="../../../assets/img/netflix-logo.png" height="17" style="margin-right: .5rem;"><span>
-                            Watch on Netflix</span></a>
-                    <a (click)="getNext()" id="btn-try-next" mat-flat-button color="primary">
-                        <mat-icon   style="margin-right: .5rem;">toys</mat-icon><span>Try Next</span>
-                    </a>
-                </div>
-
-            </div>
-
-
+    <div class="info" [ngStyle]="{'color': bgGradientDarkActivated ? '#fff': '#222'}">
+        <div class="title" [style.font-size]="filme.title.length > 20 ? '3rem' : filme.title.length < 11 ? '5.5rem' : '4rem'" ><span>{{filme.title | uppercase}}</span> </div>
+        <div class="sub" [style.width]="filme.genre[0].name.length > 8 ? '60%' : '50%'">
+            <span>{{filme.year.substring(0,4)}}</span>
+            <span>{{filme.genre[0].name | uppercase}}</span>
+            <a [ngStyle]="{'color': bgGradientDarkActivated ? '#fff': '#222'}" href="https://www.imdb.com/title/{{filme.imdb_id}}" target="_blank">{{filme.imdbRating}}/10</a>
         </div>
+        <div class="director">
+            <span *ngIf="isLoaded">Directed by &nbsp;</span>  <span id="director-name">{{filme.director | uppercase}}</span>
+        </div>
+        <div [innerHTML]="filme.plot" class="sinopse"></div>
     </div>
+
+    <div class="buttons">
+        <button  (click)="addMyList()" id="btn-add" mat-raised-button color="primary"><mat-icon style="font-size: 1.22rem; margin-top: .2rem;">{{myListButtonText.icon}}</mat-icon >{{myListButtonText.text}}</button>
+        <button (click)="getNext()" id="btn-next" mat-raised-button color="primary">NEXT</button>
+    </div>
+    
 
 </div>

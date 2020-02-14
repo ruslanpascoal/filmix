@@ -3,17 +3,30 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #3a3355;
-  // background-image: linear-gradient(to left top, #494949, #434249, #3e3b48, #383547, #332e46);
-  // background-image: linear-gradient(to right top, #2e1e40, #311d46, #331c4c, #361b53, #381a59);  /* fallback for old browsers */
-
+  // background: #3A3355;  // background-image: linear-gradient(to right top, #2e1e40, #311d46, #331c4c, #361b53, #381a59);  /* fallback for old browsers */
+  z-index: -3;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(
+    to left bottom,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #fbfcff,
+    #f5faff,
+    #eef9ff,
+    #d1f9ff,
+    #affaff,
+    #88fbff,
+    #5ffbf1
+  );
 
-  .logo-icon{
-    mat-icon{
+  .logo-icon {
+    mat-icon {
       position: absolute;
-      margin-top: -.4rem;
+      margin-top: -0.4rem;
       margin-left: 9rem;
       font-size: 4rem;
       color: #ffe925;
@@ -22,15 +35,17 @@
 
   .logo {
     span {
-      color: #ffe925;
-      font-family: "Noto Serif", serif;
-      font-weight: bold;
-      font-size: 6rem;
+      // color: #51f283;
+      font-family: "Noto Sans", sans-serif;
+      font-weight: bolder;
+      font-size: 8rem;
+
+      text-transform: uppercase;
     }
   }
   .sub {
     span {
-      color: #fff;
+      color: #000;
       font-family: "Noto Sans", sans-serif;
       font-size: 1.5rem;
     }
@@ -40,11 +55,6 @@
     margin: 1.5rem;
     width: 30%;
 
-    #home-menu-button {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-    }
 
     #home-menu-card {
       display: flex;
@@ -54,7 +64,7 @@
       margin-top: 1rem;
       height: 270px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 1);
       color: #fff;
       border-radius: 0.3rem;
 
@@ -68,11 +78,9 @@
         align-items: center;
         justify-content: space-evenly;
 
-        
-
         #home-menu-btn {
           margin-top: 2rem;
-          background: rgba(255, 255, 255, 0.85);
+          background: rgba(255, 255, 255, 1);
           height: 40px;
           width: 40%;
           color: #111;
@@ -83,7 +91,7 @@
           transition: background-color 0.1s ease 0s;
         }
         #home-menu-btn:hover {
-          background-color: rgba(255, 255, 255, 1);
+          border-bottom: solid 3px #5ffbf1;
         }
         mat-slider {
           width: 63%;
@@ -95,12 +103,5 @@
     mat-icon {
       color: #fff;
     }
-  }
-
-  #home-back-button {
-    margin-top: 2rem;
-    color: #bdbdbd;
-    padding: 1rem;
-    cursor: pointer;
   }
 }

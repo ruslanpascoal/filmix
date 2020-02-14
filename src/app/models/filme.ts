@@ -11,6 +11,8 @@ export interface Filme {
     actors?: string,
     imdbRating?: string,
     awards?: string
-    netflixSearch?: string;
+    netflixSearch?: string,
+    vibrantColor?: string,
+    darkColor?: string
    
 }
