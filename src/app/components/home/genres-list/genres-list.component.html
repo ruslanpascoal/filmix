@@ -5,7 +5,7 @@
 <div class="genres-section" *ngIf="showGenresSection">
 
     <ul>
-        <li (click)="onGenreSelect($event, item.genreName, item.id)" *ngFor="let item of genres">{{item.genreName}}</li>
+        <li (click)="onGenreSelect($event, item.genreName, item.id, item.pageNum    )" *ngFor="let item of genres">{{item.genreName}}</li>
 
     </ul>
 

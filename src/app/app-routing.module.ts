@@ -7,9 +7,10 @@ import { MylistComponent } from './components/mylist/mylist.component';
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'discover', component: MainComponent, canActivate: [AuthGuard] },
-  {path: 'mylist', component: MylistComponent}
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: 'home', component: HomeComponent},
+  {path: 'discover', component: MainComponent, canActivate: [AuthGuard], data: {animation: 'DiscoverPage'} },
+  {path: 'mylist', component: MylistComponent, canActivate: [AuthGuard], data: {animation: 'MyListPage'}}
 ];
 
 @NgModule({

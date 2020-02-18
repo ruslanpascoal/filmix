@@ -46,7 +46,7 @@ export class GenresListComponent implements OnInit {
   ngOnInit() {
 
     this.genres.push(
-      { id: 18, genreName: 'Todos os Gêneros' },
+      { id: 1, genreName: 'Todos os Gêneros' },
       { id: 28, genreName: 'Ação' },
       { id: 12, genreName: 'Aventura' },
       { id: 16, genreName: 'Animação' },
@@ -57,7 +57,7 @@ export class GenresListComponent implements OnInit {
       { id: 10751, genreName: 'Família' },
       { id: 14, genreName: 'Fantasia' },
       { id: 878, genreName: 'Ficção Científica' },
-      { id: 2, genreName: 'Suspense' },
+      { id: 9648, genreName: 'Suspense' },
       { id: 27, genreName: 'Terror' },
       { id: 53, genreName: 'Thriller' },
       { id: 37, genreName: 'Western' },
@@ -70,9 +70,9 @@ export class GenresListComponent implements OnInit {
     this.showGenresSection = !this.showGenresSection
   }
 
-  onGenreSelect($event, value, _id) {
+  onGenreSelect($event, value, _id, _pageNum) {
     this.selectedGenre.genreName = value;
-    this.movieService.selectedGenre = _id;
+    this.movieService.selectedGenre = { id: _id, genreName: value, pageNum: _pageNum };
     this.algumacoisa()
   }
 

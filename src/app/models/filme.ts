@@ -13,6 +13,7 @@ export interface Filme {
     awards?: string
     netflixSearch?: string,
     vibrantColor?: string,
-    darkColor?: string
+    darkColor?: string,
+    hover?: boolean,
    
 }

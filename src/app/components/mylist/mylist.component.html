@@ -1,1 +1,26 @@
-<p>mylist works!</p>
+<div class="container">
+
+    <div class="menu">
+        <a routerLink="/mylist">MY LIST</a>
+        <a (click)="closeMyList()" id="close">&times;</a>
+    </div>
+
+    <div class="content">
+        <mat-grid-list cols="6" gutterSize="1.5rem" rowHeight="1:1.4">
+
+            <mat-grid-tile class="grow" *ngFor="let item of myList" (mouseenter)="item.hover=true"
+                (mouseleave)="item.hover=false">
+                
+                <img [src]="item.poster" height="100%" width="100%" alt="">
+
+                
+              
+            </mat-grid-tile>
+
+
+        </mat-grid-list>
+
+    </div>
+
+
+</div>

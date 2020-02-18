@@ -1,4 +1,5 @@
 export interface Genero {
     id?: number,
-    genreName?: string
+    genreName?: string,
+    pageNum?: number
 }

@@ -16,9 +16,7 @@ export class HomeComponent implements OnInit {
   constructor(private movieService: MovieService, private router: Router, private authService: AuthService, ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.teste = "RUSLAN"
-    }, 3000)
+
   }
 
   teste: any;

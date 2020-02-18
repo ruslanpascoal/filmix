@@ -1,9 +1,12 @@
 <div class="container" [ngStyle]="{'background-image': bgGradientDarkActivated ? bgGradientDark : bgGradientLight}">
 
+<!-- <div class="container bg-pan-right" > -->
+
     <mat-spinner *ngIf="!isLoaded"></mat-spinner>
 
     <div class="menu">
-        <a routerLink="/mylist">MY LIST</a>
+        <a routerLink="">HOME</a>
+        <a (click)="openMyList()">MY LIST</a>
     </div>
 
     <div class="poster">
@@ -13,7 +16,7 @@
     <div class="info" [ngStyle]="{'color': bgGradientDarkActivated ? '#fff': '#222'}">
         <div class="title" [style.font-size]="filme.title.length > 20 ? '3rem' : filme.title.length < 11 ? '5.5rem' : '4rem'" ><span>{{filme.title | uppercase}}</span> </div>
         <div class="sub" [style.width]="filme.genre[0].name.length > 8 ? '60%' : '50%'">
-            <span>{{filme.year.substring(0,4)}}</span>
+            <span>{{filme.year.toLocaleString().substring(0,4)}}</span>
             <span>{{filme.genre[0].name | uppercase}}</span>
             <a [ngStyle]="{'color': bgGradientDarkActivated ? '#fff': '#222'}" href="https://www.imdb.com/title/{{filme.imdb_id}}" target="_blank">{{filme.imdbRating}}/10</a>
         </div>
@@ -21,10 +24,11 @@
             <span *ngIf="isLoaded">Directed by &nbsp;</span>  <span id="director-name">{{filme.director | uppercase}}</span>
         </div>
         <div [innerHTML]="filme.plot" class="sinopse"></div>
+      
     </div>
 
     <div class="buttons">
-        <button  (click)="addMyList()" id="btn-add" mat-raised-button color="primary"><mat-icon style="font-size: 1.22rem; margin-top: .2rem;">{{myListButtonText.icon}}</mat-icon >{{myListButtonText.text}}</button>
+        <button (click)="addMyList()" id="btn-add" mat-raised-button color="primary"><mat-icon style="font-size: 1.22rem; margin-top: .2rem;">{{myListButtonText.icon}}</mat-icon >{{myListButtonText.text}}</button>
         <button (click)="getNext()" id="btn-next" mat-raised-button color="primary">NEXT</button>
     </div>
     

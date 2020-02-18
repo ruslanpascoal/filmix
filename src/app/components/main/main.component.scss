@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  // background: #3A3355;
+ 
 
   .menu {
     position: absolute;
@@ -10,19 +10,18 @@
     right: 2rem;
     display: flex;
 
-    a {
-      font-size: 1.3rem;
-      text-decoration: none;
-      color: #000;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+        a {
+          font-size: 1.3rem;
+          text-decoration: none;
+          color: #000;
+          margin-left: 3rem;
+        }
+      
   }
 
   .poster {
     height: 100%;
-    width: 35%;
+    width: 40%;
   }
 
   .info {
@@ -47,6 +46,7 @@
       // -webkit-text-fill-color: transparent;
       // -webkit-text-stroke-width: 1px;
     }
+
 
     .sub {
       width: 50%;
@@ -83,6 +83,8 @@
       font-size: 1.3rem;
       width: 80%;
     }
+
+   
   }
 
   .buttons {

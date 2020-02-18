@@ -1,3 +1,5 @@
+
+
 .container {
   width: 100%;
   height: 100%;
@@ -7,56 +9,52 @@
   z-index: -3;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-    to left bottom,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #fbfcff,
-    #f5faff,
-    #eef9ff,
-    #d1f9ff,
-    #affaff,
-    #88fbff,
-    #5ffbf1
-  );
+  // background-image: linear-gradient(
+  //   to left bottom,
+  //   #ffffff,
+  //   #ffffff,
+  //   #ffffff,
+  //   #ffffff,
+  //   #ffffff,
+  //   #fbfcff,
+  //   #f5faff,
+  //   #eef9ff,
+  //   #d1f9ff,
+  //   #affaff,
+  //   #2beef5,
+  //   #5ffbf1
+  // );
 
-  .logo-icon {
-    mat-icon {
-      position: absolute;
-      margin-top: -0.4rem;
-      margin-left: 9rem;
-      font-size: 4rem;
-      color: #ffe925;
-    }
-  }
+  background-image: linear-gradient(to right top, #4dffff, #00eaff, #00d2ff, #00b8ff, #609aff, #8996ff, #af91ff, #d289ff, #d7aaff, #dfc8ff, #ede4ff, #ffffff);
+
 
   .logo {
     span {
       // color: #51f283;
       font-family: "Noto Sans", sans-serif;
       font-weight: bolder;
-      font-size: 8rem;
-
-      text-transform: uppercase;
+      
+      letter-spacing: .5rem;
+      text-transform: lowercase;
     }
   }
+
   .sub {
     span {
       color: #000;
       font-family: "Noto Sans", sans-serif;
-      font-size: 1.5rem;
+
+      
     }
   }
 
   .search-select {
     margin: 1.5rem;
-    width: 30%;
-
-
+    
+  
     #home-menu-card {
+      height: 40px;
+      width: 40%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -64,13 +62,11 @@
       margin-top: 1rem;
       height: 270px;
       width: 100%;
-      background: rgba(0, 0, 0, 1);
+      
       color: #fff;
       border-radius: 0.3rem;
 
-      genres-list {
-        width: 55%;
-      }
+    
 
       .home-menu-card-item {
         display: flex;
@@ -82,7 +78,6 @@
           margin-top: 2rem;
           background: rgba(255, 255, 255, 1);
           height: 40px;
-          width: 40%;
           color: #111;
           text-decoration: none;
           text-align: center;
@@ -95,6 +90,7 @@
         }
         mat-slider {
           width: 63%;
+
           margin-right: -1.7rem;
         }
       }
@@ -103,5 +99,176 @@
     mat-icon {
       color: #fff;
     }
+  }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+
+}
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    
+    .logo {
+      span {
+        font-size: 4rem;
+      }
+    }
+    
+    .sub {
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    genres-list{
+      width: 52% !important;
+      
+    }
+    .search-select {
+
+      width: 80%;
+    }
+
+    #home-menu-card-item{
+      span{
+        margin-left: -2rem !important;
+      }
+    }
+  
+    #home-menu-card {
+
+      background: rgba(0, 0, 0, 1);
+    }
+
+  
+}
+
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+
+    
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .logo {
+    span {
+
+      font-size: 8rem;
+
+    }
+  }
+  
+  .sub {
+    span {
+
+      font-size: 1.5rem;
+      
+    }
+  }
+
+  genres-list{
+    width: 55%;
+  }
+
+ 
+
+  .search-select {
+
+    width: 30%;
+  }
+
+  #home-menu-card {
+
+    background: rgba(0, 0, 0, 1);
   }
 }
