@@ -46,6 +46,14 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth-service';
 import { GenresListComponent } from './components/home/genres-list/genres-list.component';
 import { MylistComponent } from './components/mylist/mylist.component';
+import { MainMobileComponent } from './components/mobile/main-mobile/main-mobile.component';
+import { HomeMobileComponent } from './components/mobile/home-mobile/home-mobile.component';
+import { MyListMobileComponent } from './components/mobile/my-list-mobile/my-list-mobile.component';
+import { ScrollEventModule } from 'ngx-scroll-event';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { GeneroComponent } from './components/mobile/home/genero/genero.component';
+import { RatingComponent } from './components/mobile/home/rating/rating.component';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +62,12 @@ import { MylistComponent } from './components/mylist/mylist.component';
     SearchBarComponent,
     HomeComponent,
     GenresListComponent,
-    MylistComponent
+    MylistComponent,
+    MainMobileComponent,
+    HomeMobileComponent,
+    MyListMobileComponent,
+    GeneroComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
@@ -94,11 +107,17 @@ import { MylistComponent } from './components/mylist/mylist.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    ScrollEventModule,
+    FormsModule,
+    NgSelectModule,
+    
 
     
   ],
   providers: [AuthGuard, AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [HomeMobileComponent, MainMobileComponent, MyListMobileComponent, GeneroComponent],
+
 })
 export class AppModule { }

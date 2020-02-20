@@ -61,8 +61,6 @@ export class GenresListComponent implements OnInit {
       { id: 27, genreName: 'Terror' },
       { id: 53, genreName: 'Thriller' },
       { id: 37, genreName: 'Western' },
-
-
     )
   }
 

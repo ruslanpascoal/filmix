@@ -1,5 +1,6 @@
 export interface Genero {
     id?: number,
     genreName?: string,
-    pageNum?: number
+    pageNum?: number,
+    clicked?: boolean,
 }

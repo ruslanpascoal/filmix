@@ -6,23 +6,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { MyListService } from 'src/app/services/my-list.service';
 import { NavigationService } from 'src/app/services/navigation.service';
+import { ScrollEvent } from 'ngx-scroll-event';
 const vibrant = require('node-vibrant');
 
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
-  animations: [
-    trigger('rotate', [
-      transition(':enter', [style({ transform: 'rotate(-360deg)' }), animate('2000ms')])
-    ])
-  ]
+  selector: 'app-main-mobile',
+  templateUrl: './main-mobile.component.html',
+  styleUrls: ['./main-mobile.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainMobileComponent implements OnInit {
 
   constructor(private movieService: MovieService, private route: ActivatedRoute, private myListService: MyListService,
     private router: Router, private navigationService: NavigationService) { }
+
 
   subsc: Subscription
   movie_ids: Array<string> = []
@@ -33,16 +30,11 @@ export class MainComponent implements OnInit {
   nextClicked: boolean = false;
   isLoaded: boolean = false;
   myListButtonText = { icon: 'add', text: 'MY LIST' }
-  innerWidth: any;
+  infoTopValue: string = "65";
 
   ngOnInit() {
-    this.innerWidth = window.innerWidth;
-    console.log(this.innerWidth);
-    
+
     this.nextClicked = !this.nextClicked;
-
-
-
 
     if (this.navigationService.cameFromMyList) this.resetInfo()
     else this.getNext()
@@ -178,6 +170,24 @@ export class MainComponent implements OnInit {
       })
 
     this.isLoaded = true;
+  }
+
+  public handleScroll(event: ScrollEvent) {
+    console.log(window.pageYOffset);
+
+    if(window.pageYOffset >= 100){
+
+    }
+
+
+
+    if (event.isReachingBottom) {
+    }
+    if (event.isReachingTop) {
+    }
+    if (event.isWindowEvent) {
+    }
+ 
   }
 
 }

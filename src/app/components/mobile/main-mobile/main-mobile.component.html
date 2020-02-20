@@ -1,0 +1,49 @@
+<div class="container">
+
+    <div class="gradient">
+        a
+    </div>
+
+    <div class="icons">
+        <a routerLink="" ><mat-icon id="back">keyboard_backspace</mat-icon></a>
+        <span (click)="addMyList()"><mat-icon id="my-list">{{myListButtonText.icon}}</mat-icon></span>
+
+    </div>
+
+
+    <div class="poster" detect-scroll (onScroll)="handleScroll($event)" [bottomOffset]="100" [topOffset]="100">
+
+        <img [src]="filme.poster" height="100%" width="100%">
+
+    </div>
+
+    <div class="info" >
+
+        <div class="title">
+            <span [style.font-size]="filme.title.length > 20 ? '1.7rem' : '2.2rem'" >{{filme.title | uppercase}}</span>
+        </div>
+        
+        <div class="sub">
+            <span>{{filme.genre[0].name | uppercase}}</span>
+            <span>{{filme.year.toLocaleString().substring(0,4)}}</span>
+            <a  href="https://www.imdb.com/title/{{filme.imdb_id}}" target="_blank">{{filme.imdbRating}}/10
+            
+                <img src="../../../../assets/img/imdb-logo.png" height="10px" alt="">
+            </a>
+        </div>
+
+        <div class="director">
+            <span *ngIf="isLoaded">Directed by &nbsp;</span>  <span id="director-name">{{filme.director | uppercase}}</span>
+
+        </div>
+
+        <div [innerHTML]="filme.plot" class="sinopse"></div>
+
+    </div>
+
+    <div class="buttons">
+        <button (click)="addMyList()" id="btn-add" mat-raised-button ><mat-icon style="font-size: 1.22rem; margin-top: .2rem;">{{myListButtonText.icon}}</mat-icon >{{myListButtonText.text}}</button>
+        <button (click)="getNext()" id="btn-next" mat-raised-button  style="margin-left: 1rem;">NEXT</button>
+    </div>
+
+</div>

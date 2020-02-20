@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="title">
+        <span>SELECIONE UM GÊNERO</span>
+    </div>
+
+    <div class="generos">
+
+        <ul>
+
+            <li (click)="onGenreSelect(item)" *ngFor="let item of genres" [style.text-shadow]="item.clicked ? '3px -1px 20px white' : ''">
+                
+                <a >{{ item.genreName | uppercase }}</a>    
+                
+            
+            </li>
+    
+        </ul>
+    </div>
+
+
+</div>

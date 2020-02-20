@@ -1,0 +1,67 @@
+.container{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right top, #4dffff, #00eaff, #00d2ff, #00b8ff, #609aff, #8996ff, #af91ff, #d289ff, #d7aaff, #dfc8ff, #ede4ff, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo{
+        span{
+            color: #fff;
+            font-size: 4rem;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+        }
+    }
+    .sub{
+
+        text-align: center;
+        span{
+            color: #fff;
+            font-size: 1rem;
+            
+        }
+    }
+
+    .card{
+        margin-top: 3.5rem;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .genero{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            
+            span{
+                color: #fff;
+            }
+        }
+
+        .slider{
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            
+            span{
+                color: #fff;
+            }
+        }
+    }
+
+    button {
+        margin-top: 2rem;
+        border-radius: 30px;
+        background: #111;
+        color: #fff;
+        letter-spacing: .1rem;
+      }
+}
